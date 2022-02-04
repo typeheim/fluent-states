@@ -4,7 +4,7 @@ Easy and clear state management for Angular apps.
 
 # Getting Started
 
-Install package
+Install package and dependencies.
 
 ```shell
 yarn add @typeheim/fire-rx
