@@ -1,6 +1,32 @@
 {
   "name": "@typeheim/fluent-states",
   "version": "0.0.1-beta.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/typeheim/fluent-states.git"
+  },
+  "keywords": [
+    "fluent-states",
+    "store",
+    "state",
+    "rxjs",
+    "front-end",
+    "framework",
+    "angular",
+    "nest",
+    "back-end",
+    "ts"
+  ],
+  "author": {
+    "name": "Dima Kolodko",
+    "email": "dima@kolodko.pro",
+    "url": "https://github.com/prowwid"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/typeheim/fluent-states/issues"
+  },
+  "homepage": "https://github.com/typeheim/fluent-states#readme",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +34,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
-  "private": true,
+
   "dependencies": {
     "@angular/animations": "~12.2.0",
     "@angular/common": "~12.2.0",
