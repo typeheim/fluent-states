@@ -21,4 +21,8 @@ export class StoreSubject<T> extends ValueSubject<T> {
   static sessionStore<T>(id: string, value: T): StoreSubject<T> {
     return new StoreSubject(value, new BrowserSessionStorage());
   }
+
+  purge() {
+
+  }
 }

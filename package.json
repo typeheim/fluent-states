@@ -1,6 +1,7 @@
 {
   "name": "@typeheim/fluent-states",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1-beta.2",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/typeheim/fluent-states.git"
@@ -30,7 +31,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build fluent-states",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

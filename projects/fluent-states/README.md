@@ -27,7 +27,7 @@ First of all, you need to define store. Store is a calls that consist of observa
 observables must be public but you can have private/protected observables as well to create any pipes.
 
 ```typescript
-import {StreamStore} from '@typeheim/fluent-states'
+import {StreamStore, State} from '@typeheim/fluent-states'
 import {StatefulSubject, ValueSubject} from '@typeheim/fire-rx'
 import {map, Subject} from 'rxjs'
 
@@ -42,6 +42,9 @@ export class BookStore extends StreamStore {
 
   public securityArchiveIdentifiersStream = this.securityArchive.pipe(map(item => item.id))
 }
+
+// define state type to use in type definitions further on
+export type BookState = State<BookStore>
 ```
 
 Once you defined store, you can get readonly state that consist of all of the public properties.

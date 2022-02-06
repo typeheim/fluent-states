@@ -1,8 +1,9 @@
 import {StatefulSubject, ValueSubject,} from '@typeheim/fire-rx'
 import {Subject,} from 'rxjs'
+import {State} from "./contracts";
 
 export class StreamStore {
-  getState<T = this>(): Omit<T, 'getState' | 'storeToState' | 'complete'> {
+  getState(): State<this> {
     // @ts-ignore
     return storeToState(this)
   }

@@ -42,6 +42,9 @@ export class BookStore extends StreamStore {
 
   public securityArchiveIdentifiersStream = this.securityArchive.pipe(map(item => item.id))
 }
+
+// define state type to use in type definitions further on
+export type BookState = State<BookStore>
 ```
 
 Once you defined store, you can get readonly state that consist of all of the public properties.
