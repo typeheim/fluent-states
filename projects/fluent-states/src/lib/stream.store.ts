@@ -1,6 +1,7 @@
 import {StatefulSubject, ValueSubject,} from '@typeheim/fire-rx'
-import {Subject,} from 'rxjs'
+import {Observable, Subject,} from 'rxjs'
 import {State} from "./contracts";
+
 
 export class StreamStore {
   getState(): State<this> {
@@ -18,13 +19,25 @@ export class StreamStore {
 
 function completeStore(store: any) {
   for (const [key, value] of Object.entries(store)) {
-    if (value instanceof StatefulSubject || value instanceof ValueSubject) {
-      value.complete()
+    //@ts-ignore
+    if (value?.complete && typeof value.complete == "function") {
+      try {
+        //@ts-ignore
+        value.complete()
+      } catch (error) {}
+      //@ts-ignore
+    } else if (value?.unsubscribe && typeof value.unsubscribe == "function") {
+      try {
+        //@ts-ignore
+        value.unsubscribe()
+      } catch (error) {}
+    } else if (value instanceof Observable) {
+      continue
     }
-
-    if (isStoreGroup(value)) {
-      completeStore(store)
-    }
+    // @todo figure out how to better support groups
+    // else if (isStoreGroup(value)) {
+    //   completeStore(store)
+    // }
   }
 }
 
@@ -38,9 +51,11 @@ function storeToState(store: any) {
       state[key] = value.asStream()
     } else if (value instanceof Subject) {
       state[key] = value.asObservable()
-    } else if (isStoreGroup(value)) {
-      state[key] = storeToState(value)
     }
+    // @todo figure out how to better support groups
+    // else if (isStoreGroup(value)) {
+    //   state[key] = storeToState(value)
+    // }
   }
 
   return state

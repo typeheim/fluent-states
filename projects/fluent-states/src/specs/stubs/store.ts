@@ -1,5 +1,5 @@
 import {StatefulSubject, ValueSubject,} from '@typeheim/fire-rx'
-import {Subject} from 'rxjs'
+import {map, Subject} from 'rxjs'
 
 import {StreamStore} from '../../public-api'
 
@@ -7,6 +7,8 @@ export class BookStore extends StreamStore {
   public shelf = new StatefulSubject()
 
   public archive = new ValueSubject([])
+
+  public archivePipe = this.archive.pipe(map(item => item))
 
   public visitors = new Subject()
 
