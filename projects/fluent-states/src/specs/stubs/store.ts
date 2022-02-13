@@ -1,53 +1,49 @@
 import {StatefulSubject, ValueSubject,} from '@typeheim/fire-rx'
-import {map, Subject} from 'rxjs'
+import {BehaviorSubject, map, Observable, ReplaySubject, Subject} from 'rxjs'
 
-import {StreamStore} from '../../public-api'
+import {SelectState, State, StateModel, StreamStore} from '../../public-api'
 
-export class BookStore extends StreamStore {
-  public shelf = new StatefulSubject()
+export class SampleStateModel extends StateModel<SampleStore> {
+  protected readonly store = new SampleStore()
+}
+// Define store
+export class SampleStore extends StreamStore {
+  public statefulSubject = new StatefulSubject()
 
-  public archive = new ValueSubject([])
+  public valueSubject = new ValueSubject([])
 
-  public archivePipe = this.archive.pipe(map(item => item))
+  public replaySubject = new ReplaySubject()
 
-  public visitors = new Subject()
+  public behaviorSubject = new BehaviorSubject([])
 
-  protected closedState = new ValueSubject([])
+  public subject = new Subject()
+
+  protected protectedValueSubject = new ValueSubject([])
+
+  public pipeStream = this.valueSubject.pipe(map(item => item))
+
+  public observable = new Observable()
 
   public norRxProp = 4
 }
 
-export class GroupStore extends StreamStore {
-  public simpleGroup = {
-    shelf: new StatefulSubject(),
-    archive: new ValueSubject([]),
+export type SampleState = State<SampleStore>
+
+export class SampleComponent {
+  @SelectState('stateModel') public readonly state: SampleState
+
+  constructor(
+    public readonly stateModel: SampleStateModel,
+
+  ) {
   }
 
-  public nestedGroup = {
-    subgroup1: {
-      shelf: new StatefulSubject(),
-      archive: new ValueSubject([]),
-    },
-
-    subgroup2: {
-      shelf: new Subject(),
-      archive: new Subject(),
-    },
+  ngOnDestroy() {
+    this.stateModel.destroy()
   }
 }
 
-class BookShop {
-  constructor(protected store: BookStore) {
-  }
 
-  addBook(book: any) {
-    this.store.shelf.next(book)
-  }
-
-  getState() {
-    return this.store.getState()
-  }
-}
 
 
 

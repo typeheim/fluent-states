@@ -51,6 +51,8 @@ function storeToState(store: any) {
       state[key] = value.asStream()
     } else if (value instanceof Subject) {
       state[key] = value.asObservable()
+    } else if (value instanceof Observable) {
+      state[key] = value
     }
     // @todo figure out how to better support groups
     // else if (isStoreGroup(value)) {
