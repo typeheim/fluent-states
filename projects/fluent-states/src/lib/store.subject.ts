@@ -6,23 +6,23 @@ import {BrowserLocalStorage} from './local.storage';
 
 
 export class StoreSubject<T> extends ValueSubject<T> {
-  private constructor(value: T, protected storage?: Storage, protected id?: string) {
-    super(value)
-  }
+    private constructor(value: T, protected storage?: Storage, protected id?: string) {
+        super(value)
+    }
 
-  static inMemory<T>(id: string, value: T): StoreSubject<T> {
-    return new StoreSubject(value, new MemoryStorage());
-  }
+    static inMemory<T>(id: string, value: T): StoreSubject<T> {
+        return new StoreSubject(value, new MemoryStorage());
+    }
 
-  static localStore<T>(id: string, value: T): StoreSubject<T> {
-    return new StoreSubject(value, new BrowserLocalStorage());
-  }
+    static localStore<T>(id: string, value: T): StoreSubject<T> {
+        return new StoreSubject(value, new BrowserLocalStorage());
+    }
 
-  static sessionStore<T>(id: string, value: T): StoreSubject<T> {
-    return new StoreSubject(value, new BrowserSessionStorage());
-  }
+    static sessionStore<T>(id: string, value: T): StoreSubject<T> {
+        return new StoreSubject(value, new BrowserSessionStorage());
+    }
 
-  purge() {
+    purge() {
 
-  }
+    }
 }

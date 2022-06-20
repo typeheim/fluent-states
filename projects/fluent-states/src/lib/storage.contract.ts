@@ -1,13 +1,13 @@
 export interface Storage {
-  get length(): number
+    get length(): number
 
-  clear(): void
+    clear(): void
 
-  getItem(key: string): string | null
+    getItem(key: string): string | null
 
-  key(index: number): string | null
+    key(index: number): string | null
 
-  removeItem(key: string): void
+    removeItem(key: string): void
 
-  setItem(key: string, value: string): void
+    setItem(key: string, value: string): void
 }

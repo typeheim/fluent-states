@@ -1,39 +1,39 @@
 {
-  "name": "@typeheim/fluent-states",
-  "version": "0.0.1-beta.4",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/typeheim/fluent-states.git"
-  },
-  "keywords": [
-    "fluent-states",
-    "store",
-    "state",
-    "rxjs",
-    "front-end",
-    "framework",
-    "angular",
-    "nest",
-    "back-end",
-    "ts"
-  ],
-  "author": {
-    "name": "Dima Kolodko",
-    "email": "dima@kolodko.pro",
-    "url": "https://github.com/prowwid"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/typeheim/fluent-states/issues"
-  },
-  "homepage": "https://github.com/typeheim/fluent-states#readme",
-  "peerDependencies": {
-    "@angular/common": "^12.2.0",
-    "@angular/core": "^12.2.0",
-    "rxjs": "^7.3.0",
-    "@typeheim/fire-rx": "^0.1.0"
-  },
-  "dependencies": {
-    "tslib": "^2.3.0"
-  }
+    "name": "@typeheim/fluent-states",
+    "version": "0.0.1-beta.5",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/typeheim/fluent-states.git"
+    },
+    "keywords": [
+        "fluent-states",
+        "store",
+        "state",
+        "rxjs",
+        "front-end",
+        "framework",
+        "angular",
+        "nest",
+        "back-end",
+        "ts"
+    ],
+    "author": {
+        "name": "Dima Kolodko",
+        "email": "dima@kolodko.pro",
+        "url": "https://github.com/prowwid"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/typeheim/fluent-states/issues"
+    },
+    "homepage": "https://github.com/typeheim/fluent-states#readme",
+    "peerDependencies": {
+        "@angular/common": "^13.3.0",
+        "@angular/core": "^13.3.0",
+        "rxjs": "~7.5.0",
+        "@typeheim/fire-rx": "^0.2.0"
+    },
+    "dependencies": {
+        "tslib": "^2.3.0"
+    }
 }

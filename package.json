@@ -1,68 +1,67 @@
 {
-  "name": "@typeheim/fluent-states",
-  "version": "0.0.1-beta.4",
-  "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/typeheim/fluent-states.git"
-  },
-  "keywords": [
-    "fluent-states",
-    "store",
-    "state",
-    "rxjs",
-    "front-end",
-    "framework",
-    "angular",
-    "nest",
-    "back-end",
-    "ts"
-  ],
-  "author": {
-    "name": "Dima Kolodko",
-    "email": "dima@kolodko.pro",
-    "url": "https://github.com/prowwid"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/typeheim/fluent-states/issues"
-  },
-  "homepage": "https://github.com/typeheim/fluent-states#readme",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build fluent-states",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
-  },
-
-  "dependencies": {
-    "@angular/animations": "~12.2.0",
-    "@angular/common": "~12.2.0",
-    "@angular/compiler": "~12.2.0",
-    "@angular/core": "~12.2.0",
-    "@angular/forms": "~12.2.0",
-    "@angular/platform-browser": "~12.2.0",
-    "@angular/platform-browser-dynamic": "~12.2.0",
-    "@angular/router": "~12.2.0",
-    "@typeheim/fire-rx": "^0.1.0",
-    "rxjs": "^7.3.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
-  },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "~12.2.16",
-    "@angular/cli": "~12.2.0",
-    "@angular/compiler-cli": "~12.2.0",
-    "@types/jasmine": "~3.8.0",
-    "@types/node": "^12.11.1",
-    "jasmine-core": "~3.8.0",
-    "karma": "~6.3.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage": "~2.0.3",
-    "karma-jasmine": "~4.0.0",
-    "karma-jasmine-html-reporter": "~1.7.0",
-    "ng-packagr": "^12.1.1",
-    "typescript": "~4.3.5"
-  }
+    "name": "@typeheim/fluent-states",
+    "version": "0.0.1-beta.5",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/typeheim/fluent-states.git"
+    },
+    "keywords": [
+        "fluent-states",
+        "store",
+        "state",
+        "rxjs",
+        "front-end",
+        "framework",
+        "angular",
+        "nest",
+        "back-end",
+        "ts"
+    ],
+    "author": {
+        "name": "Dima Kolodko",
+        "email": "dima@kolodko.pro",
+        "url": "https://github.com/prowwid"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/typeheim/fluent-states/issues"
+    },
+    "homepage": "https://github.com/typeheim/fluent-states#readme",
+    "scripts": {
+        "ng": "ng",
+        "start": "ng serve",
+        "build": "ng build fluent-states",
+        "watch": "ng build --watch --configuration development",
+        "test": "ng test"
+    },
+    "dependencies": {
+        "@angular/animations": "~13.3.0",
+        "@angular/common": "~13.3.0",
+        "@angular/compiler": "~13.3.0",
+        "@angular/core": "~13.3.0",
+        "@angular/forms": "~13.3.0",
+        "@angular/platform-browser": "~13.3.0",
+        "@angular/platform-browser-dynamic": "~13.3.0",
+        "@angular/router": "~13.3.0",
+        "rxjs": "~7.5.0",
+        "@typeheim/fire-rx": "^0.2.0",
+        "tslib": "^2.3.0",
+        "zone.js": "~0.11.4"
+    },
+    "devDependencies": {
+        "@angular-devkit/build-angular": "~13.3.7",
+        "@angular/cli": "~13.3.7",
+        "@angular/compiler-cli": "~13.3.0",
+        "@types/jasmine": "~3.10.0",
+        "@types/node": "^12.11.1",
+        "jasmine-core": "~4.0.0",
+        "karma": "~6.3.0",
+        "karma-chrome-launcher": "~3.1.0",
+        "karma-coverage": "~2.1.0",
+        "karma-jasmine": "~4.0.0",
+        "karma-jasmine-html-reporter": "~1.7.0",
+        "ng-packagr": "^13.0.0",
+        "typescript": "~4.6.2"
+    }
 }
